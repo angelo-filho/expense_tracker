@@ -6,9 +6,9 @@ void main() {
   initializeDateFormatting("pt_BR", null);
 
   runApp(
-    const MaterialApp(
-      home: ExpensesScreen(),
-      locale: Locale("pt", "BR"),
+    MaterialApp(
+      theme: ThemeData(useMaterial3: true),
+      home: const ExpensesScreen(),
     ),
   );
 }
