@@ -16,7 +16,7 @@ class _ExpensesScreenState extends State<ExpensesScreen> {
       title: "Flutter Course",
       amount: 19.99,
       date: DateTime.now(),
-      category: Category.food,
+      category: Category.work,
     ),
     Expense(
       title: "Cinema",
@@ -26,9 +26,27 @@ class _ExpensesScreenState extends State<ExpensesScreen> {
     ),
   ];
 
+  void _openAddExpenseOverlay() {
+    showModalBottomSheet(
+      context: context,
+      builder: (ctx) {
+        return const Text("Modal bottom sheet!");
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Flutter Expense Tracker"),
+        actions: [
+          IconButton(
+            onPressed: _openAddExpenseOverlay,
+            icon: const Icon(Icons.add),
+          )
+        ],
+      ),
       body: Column(
         children: [
           const Text("The chart"),
