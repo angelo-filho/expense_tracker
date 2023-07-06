@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
 
-final formatter = DateFormat.yMd("pt_BR");
+final formatter = DateFormat.yMd();
 final currencyFormatter = NumberFormat.currency(
   decimalDigits: 2,
-  locale: "pt_BR",
-  symbol: "R\$",
+  symbol: r"$ ",
 );
 
 final uuid = Uuid();
