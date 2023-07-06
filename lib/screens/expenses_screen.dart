@@ -1,3 +1,4 @@
+import 'package:expense_tracker/widgets/chart/chart.dart';
 import 'package:expense_tracker/widgets/expenses_list/expenses_list.dart';
 import 'package:expense_tracker/widgets/new_expense_modal.dart';
 import 'package:flutter/material.dart';
@@ -77,6 +78,7 @@ class _ExpensesScreenState extends State<ExpensesScreen> {
         onRemoveExpense: _removeExpense,
       );
     }
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Flutter Expense Tracker"),
@@ -89,7 +91,7 @@ class _ExpensesScreenState extends State<ExpensesScreen> {
       ),
       body: Column(
         children: [
-          const Text("The chart"),
+          Chart(expenses: _registeredExpenses),
           Expanded(
             child: mainContent,
           )
