@@ -86,12 +86,10 @@ class _ExpensesScreenState extends State<ExpensesScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Flutter Expense Tracker"),
-        actions: [
-          IconButton(
-            onPressed: _openAddExpenseOverlay,
-            icon: const Icon(Icons.add),
-          )
-        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _openAddExpenseOverlay,
+        child: const Icon(Icons.add),
       ),
       body: width < 600
           ? Column(
